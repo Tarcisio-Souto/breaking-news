@@ -1,0 +1,50 @@
+version: '3.8'
+services:
+
+  # imagem breaking-news
+  breaking-news:
+    build:
+      args:
+        user: tss
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: breaking-news
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    networks:
+      - net-breaking-news
+
+  #nginx
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/:/etc/nginx/conf.d/
+    networks:
+      - net-breaking-news
+
+  # db_breaking-news
+  bndb:
+    image: mysql:5.7.22
+    restart: unless-stopped
+    ports:
+      - ${DB_PORT}:3306
+    volumes:
+      - ./.docker/mysql/dbdata:/var/lib/mysql # o banco de dados ficará salvo aqui e sempre o adicione no .gitignore, pelo amor de Deus!
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - net-breaking-news
+
+networks:
+  net-breaking-news:
+    driver: bridge
