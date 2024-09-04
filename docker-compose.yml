@@ -1,21 +1,21 @@
 version: '3.8'
 services:
 
-  # imagem breaking-news
-  breaking-news:
+  # imagem bnews
+  bnews:
     build:
       args:
         user: tss
         uid: 1000
       context: ./
       dockerfile: Dockerfile
-    image: breaking-news
+    image: bnews-app
     restart: unless-stopped
     working_dir: /var/www
     volumes:
       - ./:/var/www
     networks:
-      - net-breaking-news
+      - netbnews
 
   #nginx
   nginx:
@@ -27,24 +27,24 @@ services:
       - ./:/var/www
       - ./docker/nginx/:/etc/nginx/conf.d/
     networks:
-      - net-breaking-news
+      - netbnews
 
-  # db_breaking-news
-  bndb:
+  # bnewsdb
+  bnewsdb:
     image: mysql:5.7.22
     restart: unless-stopped
     ports:
       - ${DB_PORT}:3306
     volumes:
-      - ./.docker/mysql/dbdata:/var/lib/mysql # o banco de dados ficará salvo aqui e sempre o adicione no .gitignore, pelo amor de Deus!
+      - ./.docker/mysql/dbdata:/var/lib/mysql #Database will be saved in this folder... DON'T FORGET to add it in .gitignore
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
       MYSQL_USER: ${DB_USERNAME}
       MYSQL_PASSWORD: ${DB_PASSWORD}
     networks:
-      - net-breaking-news
+      - netbnews
 
 networks:
-  net-breaking-news:
+  netbnews:
     driver: bridge
