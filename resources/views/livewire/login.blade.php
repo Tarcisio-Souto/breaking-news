@@ -1,4 +1,18 @@
 <div class="">
+
+    <div class="row">
+        <div class="col-md-12">
+            @include('components.layouts.header')
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <br><br><br><br><br>
+        </div>
+    </div>
+
+
     <div class="p-8 lg:w-1/2 mx-auto">
         <div class="bg-white rounded-t-lg p-8">
             <p class="text-center text-sm text-gray-400 font-light">Entrar com</p>

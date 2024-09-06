@@ -24,4 +24,18 @@ class Noticia extends Model
         return $noticias;
 
     }
+
+    public static function getNoticia($id)
+    {
+        $noticia = DB::table('noticias')
+        ->where('id', '=', $id)
+        ->get();
+
+        return $noticia;
+
+    }
+
+
+
+
 }

@@ -6,6 +6,13 @@ use Livewire\Component;
 
 class Login extends Component
 {
+    public function login()
+    {
+        return $this->redirectRoute('login', navigate: true);
+    }
+
+
+
     public function render()
     {
         return view('livewire.login');
