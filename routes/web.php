@@ -4,6 +4,7 @@ use App\Livewire\Home;
 use App\Livewire\Login;
 use App\Livewire\Logout;
 use App\Livewire\OpenNews;
+use App\Livewire\Postar;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,4 +25,4 @@ Route::get('/logout', Logout::class)->name('logout');
 
 Route::get('/open-news/{id}', OpenNews::class)->name('open-news');
 
-
+Route::get('/postar', Postar::class)->name('postar');

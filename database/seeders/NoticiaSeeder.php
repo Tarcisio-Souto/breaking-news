@@ -23,18 +23,18 @@ Sed sit amet ipsum in nibh lacinia ullamcorper at vitae ex. Integer quis tincidu
 
 
         $noticias = [
-            ['titulo' => 'Título 1', 'descricao' => $descricao, 'imagem' => null],
-            ['titulo' => 'Título 2', 'descricao' => $descricao, 'imagem' => null],
-            ['titulo' => 'Título 3', 'descricao' => $descricao, 'imagem' => null],
-            ['titulo' => 'Título 4', 'descricao' => $descricao, 'imagem' => null],
-            ['titulo' => 'Título 5', 'descricao' => $descricao, 'imagem' => null],
-            ['titulo' => 'Título 6', 'descricao' => $descricao, 'imagem' => null],
-            ['titulo' => 'Título 7', 'descricao' => $descricao, 'imagem' => null],
-            ['titulo' => 'Título 8', 'descricao' => $descricao, 'imagem' => null],
-            ['titulo' => 'Título 9', 'descricao' => $descricao, 'imagem' => null],
-            ['titulo' => 'Título 10', 'descricao' => $descricao, 'imagem' => null],
-            ['titulo' => 'Título 11', 'descricao' => $descricao, 'imagem' => null],
-            ['titulo' => 'Título 12', 'descricao' => $descricao, 'imagem' => null]
+            ['titulo' => 'Título 1', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
+            ['titulo' => 'Título 2', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
+            ['titulo' => 'Título 3', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
+            ['titulo' => 'Título 4', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
+            ['titulo' => 'Título 5', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
+            ['titulo' => 'Título 6', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
+            ['titulo' => 'Título 7', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
+            ['titulo' => 'Título 8', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
+            ['titulo' => 'Título 9', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
+            ['titulo' => 'Título 10', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
+            ['titulo' => 'Título 11', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
+            ['titulo' => 'Título 12', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg']
         ];
         
         foreach ($noticias as $noticia) {

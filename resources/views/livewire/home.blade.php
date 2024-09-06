@@ -44,14 +44,14 @@
                                             <p class="text-gray-600 line-clamp-4">{{ $noticia->descricao }}</p>
                                         </div>
                                         <div class="col-md-4">
-                                            <img src="https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg"
+                                            <img src="{{ url("{$noticia->imagem}") }}"
                                                 class="h-45">
                                         </div>
                                     @endif
 
                                     @if ($count % 2 != 0)
                                         <div class="col-md-4">
-                                            <img src="https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg"
+                                            <img src="{{ url("{$noticia->imagem}") }}"
                                                 class="h-45">
                                         </div>
                                         <div class="col-md-8">
