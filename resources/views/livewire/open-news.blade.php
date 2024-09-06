@@ -14,28 +14,24 @@
     </div>
 
     @foreach ($noticia as $new)
+        <div class="row">
 
-    <div class="row">
-
-        @if (Auth::check())
-                <a href="/editar-postagem/{{ $new->id }}"><i class="fas fa-edit fa-edit-custom"></i></a>
-                <i class="fas fa-trash-alt fa-trash-custom"></i>
+            @if (Auth::check())
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4" align="right">
+                    <div class="btn-group text-right" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-warning">Editar</button>
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                    </div>
+                </div>
             @endif
 
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4" align="right">
-            <div class="btn-group text-right" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-warning">Editar</button>
-                <button type="button" class="btn btn-danger">Excluir</button>
-            </div>
         </div>
 
-    </div>
+        <br><br>
 
-    <br><br>
-
-    <div class="col-md-12 bg-sky-600 px-5 py-5 rounded-lg">
+        <div class="col-md-12 bg-sky-600 px-5 py-5 rounded-lg">
             <div class="row">
 
                 <div class="col-md-4"></div>
@@ -62,8 +58,8 @@
                 </div>
 
             </div>
-        
-    </div>
+
+        </div>
     @endforeach
 
     <div class="row">
