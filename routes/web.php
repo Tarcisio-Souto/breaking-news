@@ -17,10 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', Home::class);
+Route::get('/', Home::class)->name('/');
 
 Route::get('/login', Login::class)->name('login');
+Route::get('/logout', Logout::class)->name('logout');
 
 Route::get('/open-news/{id}', OpenNews::class)->name('open-news');
 
-Route::get('/logout', Logout::class)->name('logout');
+

@@ -10,15 +10,15 @@ class Logout extends Component
 
     public function logout()
     {
-        if (Auth::check()) {
-            Auth::logout();
-            return redirect()->route('login');
-            //return $this->redirectRoute('login', navigate: true);
-        }
+        Auth::logout();
+
+        session()->flash('message', 'Você foi deslogado.');
+        return $this->redirectRoute('login', navigate: true);
     }
 
     public function render()
     {
-        return view('livewire.logout');
+        Auth::logout();
+        return view('livewire.login');
     }
 }

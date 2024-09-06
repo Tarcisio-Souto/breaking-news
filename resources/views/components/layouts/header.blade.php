@@ -27,12 +27,20 @@
                         Início
                     </a>
                 </li>
+                @if (Auth::check())
+                    <li>
+                        <a href="/postar"
+                            class="block no-underline py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            Postar
+                        </a>
+                    </li>
+                @endif
                 <li>
                     <a href="#"
                         class="block no-underline py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                         Sobre
                     </a>
-                </li>
+                </li>                
                 <li>
                     @if (!Auth::check())
                         <a href="/login" wire:click="login"
