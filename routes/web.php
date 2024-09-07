@@ -1,22 +1,15 @@
 <?php
 
+use App\Livewire\EditarNoticia;
 use App\Livewire\Home;
 use App\Livewire\Login;
 use App\Livewire\Logout;
 use App\Livewire\OpenNews;
 use App\Livewire\Postar;
+use App\Livewire\Update;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
 
 Route::get('/', Home::class)->name('/');
 
@@ -26,3 +19,5 @@ Route::get('/logout', Logout::class)->name('logout');
 Route::get('/open-news/{id}', OpenNews::class)->name('open-news');
 
 Route::get('/postar', Postar::class)->name('postar');
+
+Route::get('/editar/{id}', EditarNoticia::class)->name('editar');

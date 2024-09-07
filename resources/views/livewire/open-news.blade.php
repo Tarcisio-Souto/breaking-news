@@ -21,7 +21,7 @@
                 <div class="col-md-4"></div>
                 <div class="col-md-4" align="right">
                     <div class="btn-group text-right" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-warning">Editar</button>
+                        <a href="/editar/{{$new->id}}"><button type="button" class="btn btn-warning">Editar</button></a>
                         <button type="button" class="btn btn-danger">Excluir</button>
                     </div>
                 </div>

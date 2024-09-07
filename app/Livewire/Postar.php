@@ -20,9 +20,8 @@ class Postar extends Component
     #[Validate('required')]
     public $descricao;
 
-    #[Validate('required|image')]
+    #[Validate('image')]
     public $photo;
-
 
     public function postar()
     {
@@ -42,11 +41,11 @@ class Postar extends Component
             'imagem' => $complete_path,
         ]);
 
+
         session()->flash('message', 'Notícia registrada com sucesso!');
         return $this->redirectRoute('/', navigate: true);
 
     }
-
 
     public function render()
     {

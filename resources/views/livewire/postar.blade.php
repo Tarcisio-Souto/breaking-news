@@ -26,7 +26,7 @@
                         class="border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 peer h-full min-h-[100px] w-full resize-none rounded-[7px] px-3 py-2.5 font-sans text-sm font-normal outline outline-0 transition-all"
                         placeholder="" wire:model="descricao"></textarea>
                 </div>
-                <input type="file" wire:model="photo">
+                <input type="file" wire:model="photo" class="form-control">
 
             </div>
             <div class="space-x-4 mt-8"> <button type="submit"
