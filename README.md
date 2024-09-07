@@ -83,6 +83,7 @@ Projeto de leitura de notícias. Dividido entre ambiente de usuário e administr
 </ul>
 <br>
 <p>Observação: após executar estes comandos, retorne o valor do parâmetro: DB_HOST=bnewsdb</p>
+<p>Usuário de testes: E-mail: admin@admin.com | Senha: kirchhoff</p>
 <br>
 
 <br><br>
