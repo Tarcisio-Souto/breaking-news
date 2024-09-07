@@ -30,18 +30,27 @@ class EditarNoticia extends Component
 
     public function update()
     {
+        $noticia = Noticia::getNoticia($this->id);
+
         if ($this->photo != null) {
 
-            /* Salvando a nova imagem */
-            $path = 'noticia/' . $this->id;
-            $this->photo->store($path);
-            $this->complete_path = substr(Storage::url(Storage::disk('public')->put($path, $this->photo)), 9);
+            if ($this->photo != $noticia[0]->imagem) {
+
+                /* Removendo a imagem anterior */
+                Storage::disk('public')->delete($noticia[0]->imagem);
+
+                /* Salvando a nova imagem */
+                $path = 'noticia/' . $this->id;
+                $this->photo->store($path);
+                $this->complete_path = substr(Storage::url(Storage::disk('public')->put($path, $this->photo)), 9);
+            } else 
+            {
+                $this->complete_path = $this->photo;
+            }
+            
         }
 
         $noticia = Noticia::find($this->id);
-
-        /* Removendo a imagem anterior */
-        Storage::disk('public')->delete($noticia->imagem);
 
         $noticia->update([
             'titulo' => $this->titulo,

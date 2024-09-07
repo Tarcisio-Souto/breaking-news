@@ -13,3 +13,4 @@ yarn-error.log
 /.docker
 *.log
 /data
+/public/noticia

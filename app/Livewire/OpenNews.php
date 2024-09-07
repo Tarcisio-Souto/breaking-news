@@ -10,6 +10,14 @@ class OpenNews extends Component
 
     public $id;  
 
+    public function delete($id)
+    {
+        Noticia::find($id)->delete();
+
+        session()->flash('message', 'Notícia deletada.');
+        return $this->redirectRoute('/', navigate: true);
+    }
+
     public function render()
     {
         $noticia = Noticia::getNoticia($this->id);

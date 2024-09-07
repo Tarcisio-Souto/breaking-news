@@ -22,7 +22,8 @@
                 <div class="col-md-4" align="right">
                     <div class="btn-group text-right" role="group" aria-label="Basic example">
                         <a href="/editar/{{$new->id}}"><button type="button" class="btn btn-warning">Editar</button></a>
-                        <button type="button" class="btn btn-danger">Excluir</button>
+                        <button type="button" class="btn btn-danger" wire:click="delete({{ $new->id }})" 
+                            wire:confirm="Deseja realmente deletar?">Excluir</button>
                     </div>
                 </div>
             @endif
@@ -31,7 +32,7 @@
 
         <br><br>
 
-        <div class="col-md-12 bg-sky-600 px-5 py-5 rounded-lg">
+        <div class="col-md-12 px-5 py-5 rounded-lg bg-white p-6 shadow">
             <div class="row">
 
                 <div class="col-md-4"></div>
@@ -47,7 +48,7 @@
             <div class="row">
 
                 <div class="col-md-4">
-                    <img src="https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg"
+                    <img src="{{ url("{$new->imagem}") }}"
                         class="h-96">
                 </div>
 

@@ -29,11 +29,19 @@
                         <input wire:model="titulo" type="text" name="titulo" id="titulo"
                             value="{{ $new->titulo }}"
                             class="font-sans text-sm font-normal border rounded py-1 px-3 text-gray-700 w-full" />
+                        @if ($errors->has('titulo'))
+                            <p></p>
+                            <span class="text-danger">{{ $errors->first('titulo') }}</span>
+                        @endif
                     </div>
                     <div> <label for="" class="text-sm text-gray-700 block mb-1 font-medium">Descrição</label>
                         <textarea wire:model="descricao" name="descricao" id="descricao"
                             class="border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 peer h-full min-h-[100px] w-full resize-none rounded-[7px] px-3 py-2.5 font-sans text-sm font-normal outline outline-0 transition-all"
                             placeholder="">{{ $new->descricao }}</textarea>
+                        @if ($errors->has('descricao'))
+                            <p></p>
+                            <span class="text-danger">{{ $errors->first('descricao') }}</span>
+                        @endif
                     </div>
                     <div class="form-group" align="center">
                         @if ($new->imagem != null)
@@ -50,6 +58,10 @@
                     x-on:livewire-upload-progress="progress = $event.detail.progress">
 
                     <input name="photo" id="photo" wire:model="photo" type="file" class="form-control">
+                    @if ($errors->has('photo'))
+                        <p></p>
+                        <span class="text-danger">{{ $errors->first('photo') }}</span>
+                    @endif
 
                     <div class="space-x-4 mt-8"> <button type="submit"
                             class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50">Salvar</button>
@@ -71,9 +83,6 @@
                             <span class="text-white text-3xl font-bold">Processando a imagem</span>
 
                         </div>
-                        <!--<div class="w-full h-4 bg-slate-100 rounded-lg shadow-inner mt-3">
-                            <div class="bg-green-500 h-4 rounded-lg" :style="{ width: `${progress}%` }"></div>
-                        </div>-->
                     </div>
                 </div>
             </div>

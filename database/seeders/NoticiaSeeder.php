@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Noticia;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Storage;
 
 class NoticiaSeeder extends Seeder
 {
@@ -20,9 +21,9 @@ Nulla nec mauris ac odio posuere fermentum eu eu ligula. Etiam congue sem orci, 
 
 Sed sit amet ipsum in nibh lacinia ullamcorper at vitae ex. Integer quis tincidunt neque. Aliquam aliquam varius ligula, ut molestie turpis egestas ut. Integer condimentum, risus quis venenatis tristique, urna nibh iaculis massa, a mattis odio justo at metus. Phasellus viverra nulla nec enim porta, non consequat enim pharetra. Ut venenatis nulla nisl, eget fringilla sapien dictum sed. Sed sit amet augue vel velit pulvinar tempor. Maecenas euismod sed ligula eu sodales. Donec commodo odio fermentum, tempor neque commodo, finibus nulla. Nunc rutrum consequat ex, vel dignissim sapien fermentum vitae. Curabitur sit amet tincidunt elit, in mattis urna. Mauris tempus sapien eu nulla vulputate sagittis.";
 
+        $imagem = 'default/starlight.jpg';
 
-
-        $noticias = [
+        /*$noticias = [
             ['titulo' => 'Título 1', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
             ['titulo' => 'Título 2', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
             ['titulo' => 'Título 3', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
@@ -35,6 +36,21 @@ Sed sit amet ipsum in nibh lacinia ullamcorper at vitae ex. Integer quis tincidu
             ['titulo' => 'Título 10', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
             ['titulo' => 'Título 11', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg'],
             ['titulo' => 'Título 12', 'descricao' => $descricao, 'imagem' => 'https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg']
+        ];*/
+
+        $noticias = [
+            ['titulo' => 'Título 1', 'descricao' => $descricao, 'imagem' => $imagem],
+            ['titulo' => 'Título 2', 'descricao' => $descricao, 'imagem' => $imagem],
+            ['titulo' => 'Título 3', 'descricao' => $descricao, 'imagem' => $imagem],
+            ['titulo' => 'Título 4', 'descricao' => $descricao, 'imagem' => $imagem],
+            ['titulo' => 'Título 5', 'descricao' => $descricao, 'imagem' => $imagem],
+            ['titulo' => 'Título 6', 'descricao' => $descricao, 'imagem' => $imagem],
+            ['titulo' => 'Título 7', 'descricao' => $descricao, 'imagem' => $imagem],
+            ['titulo' => 'Título 8', 'descricao' => $descricao, 'imagem' => $imagem],
+            ['titulo' => 'Título 9', 'descricao' => $descricao, 'imagem' => $imagem],
+            ['titulo' => 'Título 10', 'descricao' => $descricao, 'imagem' => $imagem],
+            ['titulo' => 'Título 11', 'descricao' => $descricao, 'imagem' => $imagem],
+            ['titulo' => 'Título 12', 'descricao' => $descricao, 'imagem' => $imagem]
         ];
         
         foreach ($noticias as $noticia) {
