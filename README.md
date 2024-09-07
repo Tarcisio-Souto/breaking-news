@@ -56,7 +56,7 @@ Projeto de leitura de notícias. Dividido entre ambiente de usuário e administr
     <li>composer install</li>
     <li>php artisan key:generate</li>
     <li>php artisan storage:link</li>
-    <li>docker-compose up -d</li>
+    <li>docker compose up -d</li>
 </ul>
 <br>
 ><h3 align="center">Configurações do Banco de Dados No Arquivo .env:</h3>
