@@ -71,7 +71,7 @@ Projeto de leitura de notícias. Dividido entre ambiente de usuário e administr
     <li>DB_PASSWORD=root</li>
 </ul>
 <br>
-><p>Observação: para executar os comandos abaixo, pode ser necessário alterar o seguinte parâmetro para: DB_HOST=127.0.0.1</p>
+<p>Observação: para executar os comandos abaixo, pode ser necessário alterar o seguinte parâmetro para: DB_HOST=127.0.0.1</p>
 <br>
 <p>
 
@@ -82,10 +82,7 @@ Projeto de leitura de notícias. Dividido entre ambiente de usuário e administr
     <li>php artisan db:seed</li>
 </ul>
 <br>
-><p>Observação: após executar estes comandos, retorne o valor do parâmetro: DB_HOST=bnewsdb</p>
-<br>
-
-><h3 align="center">Swagger</h3>
+<p>Observação: após executar estes comandos, retorne o valor do parâmetro: DB_HOST=bnewsdb</p>
 <br>
 
 <br><br>
